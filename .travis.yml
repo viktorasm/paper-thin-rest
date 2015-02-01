@@ -6,4 +6,4 @@ install:
   - export PYTHONPATH=$PYTHONPATH:exampleProject/
   - pip install -r paperThinRest/requirements.txt
 # command to run tests
-script: nosetests
+script: nosetests paperThinRest/ exampleProject/
