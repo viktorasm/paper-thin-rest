@@ -29,8 +29,7 @@ def processRegisterResource(app,path,module):
     mapToResource = getModuleMethod('mapToResource')
     if mapToResource is None:
         mapToResource = lambda thing: thing  # a passthrough default implementation
-    
-    
+        
     createItem = getModuleMethod('createItem')
     if createItem is not None:
         def httpCreateItem():
