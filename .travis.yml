@@ -1,0 +1,10 @@
+language: python
+python:
+  - "2.7"
+install:
+  - export PYTHONPATH=$PYTHONPATH:paperThinRest/
+  - export PYTHONPATH=$PYTHONPATH:exampleProject/
+  - pip install .
+  - pip install -r paperThinRest/requirements.txt
+# command to run tests
+script: nosetests
