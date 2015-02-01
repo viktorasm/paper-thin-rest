@@ -1,4 +1,5 @@
 # paper-thin-rest
+[![Build Status](https://travis-ci.org/viktorasm/paper-thin-rest.svg?branch=master)](https://travis-ci.org/viktorasm/paper-thin-rest)
 
 A base code for implementing REST services in Python, [Flask](http://flask.pocoo.org/), where only JSON services are implemented.
 
