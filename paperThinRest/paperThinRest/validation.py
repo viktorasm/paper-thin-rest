@@ -25,17 +25,23 @@ class SchemaBuilder(object):
     
     def build(self):
         return self.result
-
+    
 def schema(itemSchema):
     '''
     decorator: validate json schema for argument 'itemData' against provided 'itemSchema';
     will throw ApiErrorException().jsonValidationFailed() if validation error happens
     
-    usage: 
+    Example: 
     
-    @schema
-    def method():
-        ...
+        projectSchema = SchemaBuilder().object() \
+                .addProperty('title',type='string',required=True) \
+                .addProperty('author',type='string') \
+                .build()
+                
+        @schema(projectSchema)
+        def createItem(itemData):
+            ...
+            
     '''
     
     def schemaValidator(func):
